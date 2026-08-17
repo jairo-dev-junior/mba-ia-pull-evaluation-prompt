@@ -16,15 +16,15 @@ Além disso, o prompt determina o formato `Como um..., eu quero..., para que...`
 
 As cinco métricas são calculadas por `src/evaluate.py` sobre os 15 exemplos do dataset. As credenciais são mantidas exclusivamente no arquivo `.env`, que não é versionado. A avaliação abaixo foi executada em 25/07/2026 com `gpt-4o-mini` para geração e `gpt-4o` como avaliador.
 
-| Métrica | Mínimo exigido | Resultado atual |
-| --- | ---: | ---: |
-| Helpfulness | 0,80 | **0,8813** |
-| Correctness | 0,80 | **0,8411** |
-| F1-Score | 0,80 | **0,8063** |
-| Clarity | 0,80 | **0,8867** |
-| Precision | 0,80 | **0,8760** |
+| Métrica | v1 (baseline do enunciado) | v2 (avaliação executada) | Mínimo exigido |
+| --- | ---: | ---: | ---: |
+| Helpfulness | 0,45 | **0,8813** | 0,80 |
+| Correctness | 0,52 | **0,8411** | 0,80 |
+| F1-Score | 0,48 | **0,8063** | 0,80 |
+| Clarity | 0,50 | **0,8867** | 0,80 |
+| Precision | 0,46 | **0,8760** | 0,80 |
 
-A média geral foi **0,8583**. Todas as métricas e a média geral ficaram acima de `0,80`, portanto o prompt foi aprovado. A aprovação requer **cada** métrica e a média geral maiores ou iguais a `0,80`.
+A média do baseline v1 é **0,4820** e a média do v2 é **0,8583**. Os valores de v1 são os resultados de referência exibidos no enunciado para o prompt-base; os do v2 foram obtidos na avaliação descrita abaixo. Todas as métricas e a média geral do v2 ficaram acima de `0,80`, portanto o prompt foi aprovado. A aprovação requer **cada** métrica e a média geral maiores ou iguais a `0,80`.
 
 ## Evidência da avaliação no LangSmith
 
